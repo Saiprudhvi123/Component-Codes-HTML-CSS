@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <input type="text" id="daterange" name="daterange" placeholder="Select Date" readonly>
+ 
+    <script>
+        flatpickr('#daterange', {
+            mode: 'range',
+            dateFormat: 'Y-m-d',
+            onChange: function(selectedDates, dateStr, instance) {
+                // Your logic when the date range changes
+                console.log('Selected dates:', selectedDates);
+            }
+            
+        });
+    </script>
+</body>
+</html>
+ 
